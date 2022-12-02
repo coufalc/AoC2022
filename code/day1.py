@@ -1,5 +1,5 @@
 def day_1():
-    with open('../day1') as infile:
+    with open('day1') as infile:
         groups = infile.read().split('\n\n')
     max = [(0,0),(-1,-1),(-2,-2)]
     group = 0
