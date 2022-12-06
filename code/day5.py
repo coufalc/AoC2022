@@ -19,7 +19,7 @@ def parse_raw_moves(raw_moves):
         if not line:
             continue
         line_split = line.split()
-        moves += [(int(line_split[1]),int(line_split[3]),int(line_split[5]))]
+        moves += [(int(line_split[1]), int(line_split[3]), int(line_split[5]))]
 
     return moves
 
