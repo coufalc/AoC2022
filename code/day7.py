@@ -14,7 +14,7 @@ class Node(object):
     def my_print(self, level):
         print(' ' * (level * 2) + '/' + self.name)
         for i in self.files:
-            print(' '*((level+1)*2)+i[0]+ ' '+str(i[1]))
+            print(' '*((level+1)*2)+i[0] + ' '+str(i[1]))
         for i in self.dirs:
             i.my_print(level+1)
 
@@ -85,5 +85,3 @@ def day_7():
     tree_size = get_dir_size(file_tree)
     print(f'part 1 answer: {part1(file_tree, 0)}')
     print(f'part 2 answer: {get_dir_size(part2(file_tree,tree_size, (file_tree, 0))[0])}')
-
-
