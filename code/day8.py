@@ -66,7 +66,6 @@ def part2(forest):
     for row in range(len(forest)):
         for col in range(len(forest[0])):
             score = calc_score(forest, row, col)
-            # print(row,col,score)
             if score > highest_score:
                 highest_score = score
     return highest_score
