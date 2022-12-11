@@ -18,15 +18,15 @@ def part1(forest):
                     forest[idx][idx2][1] = True
     for idx in range(len(forest), 0, -1):
         tallest = -1
-        for idx2 in range(len(forest[0]),0,-1):
+        for idx2 in range(len(forest[0]), 0, -1):
             if forest[idx-1][idx2-1][0] > tallest:
                 tallest = forest[idx-1][idx2-1][0]
                 if not forest[idx-1][idx2-1][1]:
                     forest[idx-1][idx2-1][1] = True
                     visible += 1
-    for idx2 in range(len(forest[0]),0,-1):
+    for idx2 in range(len(forest[0]), 0, -1):
         tallest = -1
-        for idx in range(len(forest),0,-1):
+        for idx in range(len(forest), 0, -1):
             if forest[idx-1][idx2-1][0] > tallest:
                 tallest = forest[idx-1][idx2-1][0]
                 if not forest[idx-1][idx2-1][1]:
@@ -36,7 +36,7 @@ def part1(forest):
     return visible
 
 
-def calc_score(forest,row,col):
+def calc_score(forest, row, col):
     down = 0
     up = 0
     right = 0
